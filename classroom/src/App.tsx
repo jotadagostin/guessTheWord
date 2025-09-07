@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styles from "./app.module.css";
+import { Header } from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  function handleRestartGame() {
+    alert("Restart the game");
+  }
   return (
-    
-  )
+    <div className={styles.container}>
+      <main>
+        <Header current={2} max={10} onRestart={handleRestartGame} />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
