@@ -2,6 +2,7 @@
   font-size: 16px;
   --oragen-color: #e8891c;
   --gray-color: #9b9b9b;
+  --white-color: #f5f5fa;
 }
 
 * {
@@ -11,14 +12,13 @@
 }
 
 body {
-  background-color: #f5f5fa;
+  background-color: var(--white-color);
   font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
 }
 
-input {
+input,
+button {
   font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
 }
 
 button {
