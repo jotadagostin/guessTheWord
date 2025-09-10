@@ -1,17 +1,17 @@
 export type Challenge = {
-  id: number
-  word: string
-  tip: string
-}
+  id: number;
+  word: string;
+  tip: string;
+};
 
 export const WORDS: Challenge[] = [
-  { id: 1, word: "CSS", tip: "Linguagem de estilos" },
-  { id: 2, word: "REACT", tip: "Biblioteca para criar interfaces Web" },
-  { id: 3, word: "HTML", tip: "Linguagem de marcação" },
+  { id: 1, word: "CSS", tip: "Style language" },
+  { id: 2, word: "REACT", tip: "Library for creating web interfaces" },
+  { id: 3, word: "HTML", tip: "Markup language" },
   {
     id: 4,
     word: "Javascript",
-    tip: "Uma das linguagens de programação mais utilizadas no mundo",
+    tip: "One of the most widely used programming languages ​​in the world",
   },
-  { id: 5, word: "Typescript", tip: "Para adicionar tipagem no Javascript" },
-]
+  { id: 5, word: "Typescript", tip: "To add typing in Javascript" },
+];
