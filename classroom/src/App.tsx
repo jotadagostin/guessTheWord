@@ -19,7 +19,11 @@ export default function App() {
   const ATTEMPT_MARGIN = 5;
 
   function handleRestartGame() {
-    alert("Restart the game");
+    const isConfirmed = window.confirm("Are you sure about it?");
+
+    if (isConfirmed) {
+      startGame();
+    }
   }
 
   function startGame() {
@@ -76,17 +80,18 @@ export default function App() {
 
   useEffect(() => {
     if (!challenge) {
-      return endGame("Congratulations, you found the word!");
-    }
-
-    const attemptLimit = challenge.word.length + ATTEMPT_MARGIN;
-    if (lettersUsed.length === attemptLimit) {
-      return endGame("Sad, you used all the tries...");
+      return;
     }
 
     setTimeout(() => {
       if (score === challenge.word.length) {
-        return;
+        return endGame("Congratulations, you found the word!");
+      }
+
+      const attemptLimit = challenge.word.length + ATTEMPT_MARGIN;
+
+      if (lettersUsed.length === attemptLimit) {
+        return endGame("Sad, you used all the tries...");
       }
     }, 200);
   }, [score, lettersUsed.length]);
