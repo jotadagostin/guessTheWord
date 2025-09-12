@@ -39,3 +39,9 @@
   font-size: 1.37rem;
   color: var(--oragen-color);
 }
+
+@media screen and (max-width: 390px) {
+  .container > img {
+    height: 2.75rem;
+  }
+}
